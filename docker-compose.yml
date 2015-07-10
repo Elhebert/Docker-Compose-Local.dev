@@ -13,6 +13,14 @@ web:
     links:
         - db:db
         - maildev:maildev
+        - blackfire:blackfire
+
+blackfire:
+    restart: always
+    image: blackfire/blackfire
+    environment:
+        - BLACKFIRE_SERVER_ID=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+        - BLACKFIRE_SERVER_TOKEN=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
 
 ## Configuration Nginx + PHP
 #web:
