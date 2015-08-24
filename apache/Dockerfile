@@ -1,6 +1,14 @@
 FROM ubuntu:trusty
 MAINTAINER Grafikart <contact@grafikart.fr>
 
+# FIX Apache/PHP write permissions to the app
+ENV BOOT2DOCKER_ID 1000
+ENV BOOT2DOCKER_GID 50
+RUN usermod -u ${BOOT2DOCKER_ID} www-data && \
+    usermod -G staff www-data
+RUN groupmod -g $(($BOOT2DOCKER_GID + 10000)) $(getent group $BOOT2DOCKER_GID | cut -d: -f1)
+RUN groupmod -g ${BOOT2DOCKER_GID} staff
+
 # Install base packages
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get -yq install \
