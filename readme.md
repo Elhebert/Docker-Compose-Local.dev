@@ -1,5 +1,5 @@
 # Docker-compose
 
-Voici ma configuration pour un environnemente de dev basé sur Docker. Cette configuration est avant tout faites pour mes besoin mais je me suis dit que ça pourrait servir à d'autres.
+Voici ma configuration pour un environnemente de dev basÃ© sur Docker. Cette configuration est avant tout faites pour mes besoins mais je me suis dit que Ã§a pourrait servir Ã  d'autres.
 
-Pour que cette configuration fonctionne il est impératif que vos fichiers web soit à la racine de `/var/www`
+Pour que cette configuration fonctionne il est impÃ©ratif que vos fichiers web soit Ã  la racine de `/var/www`
